@@ -1,10 +1,8 @@
 import numpy as np
-from utils.features import prepare_for_training
+from TYDS.linear.utils.features import prepare_for_training
 
 
 class LinearRegression:
-
-
     """数据，监督学习"""
     def __init__(self,data,labels,polynomial_degree = 0,sinusoid_degree = 0,normalize_data=True):
         """
