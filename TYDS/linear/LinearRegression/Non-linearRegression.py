@@ -6,13 +6,21 @@ from linear_regression import LinearRegression
 
 data = pd.read_csv('../data/non-linear-regression-x-y.csv')
 
-x = data['x'].values.reshape((data.shape[0], 1))
-y = data['y'].values.reshape((data.shape[0], 1))
+print(data)
+print(data['x'].values)
+print(data['y'].values)
+
+x = data['x'].values.reshape((data.shape[0], 1))  # reshape x to be a column vector
+y = data['y'].values.reshape((data.shape[0], 1))  # reshape y to be a column vector
+print(x)
+print("\n")
+print(y)
 
 data.head(10)
 
 plt.plot(x, y)
 plt.show()
+
 
 num_iterations = 50000  
 learning_rate = 0.02  
@@ -46,3 +54,5 @@ y_predictions = linear_regression.predict(x_predictions)
 plt.scatter(x, y, label='Training Dataset')
 plt.plot(x_predictions, y_predictions, 'r', label='Prediction')
 plt.show()
+
+
