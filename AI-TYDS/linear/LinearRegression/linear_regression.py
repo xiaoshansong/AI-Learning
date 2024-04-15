@@ -14,7 +14,7 @@ class LinearRegression:
         """
         (data_processed,
          features_mean, 
-         features_deviation)  = prepare_for_training(data, polynomial_degree, sinusoid_degree,normalize_data=True)
+         features_deviation) = prepare_for_training(data, polynomial_degree, sinusoid_degree,normalize_data=True)
          
         self.data = data_processed
         self.labels = labels

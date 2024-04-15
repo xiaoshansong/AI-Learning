@@ -1,9 +1,9 @@
 """Prepares the dataset for training"""
 
 import numpy as np
-from .normalize import normalize
-from .generate_sinusoids import generate_sinusoids
-from .generate_polynomials import generate_polynomials
+from normalize import normalize
+from generate_sinusoids import generate_sinusoids
+from generate_polynomials import generate_polynomials
 
 
 def prepare_for_training(data, polynomial_degree=0, sinusoid_degree=0, normalize_data=True):

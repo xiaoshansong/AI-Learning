@@ -12,3 +12,6 @@ print(c)
 
 d = [x*2 for x in range(10) if x % 2 == 0]
 print(d)
+
+e = tuple([1,2,3,4,5])
+print(e)
