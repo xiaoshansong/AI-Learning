@@ -1,8 +1,11 @@
 import numpy as np
 from utils.features import prepare_for_training
 
+
 class LinearRegression:
 
+
+    """数据，监督学习"""
     def __init__(self,data,labels,polynomial_degree = 0,sinusoid_degree = 0,normalize_data=True):
         """
         1.对数据进行预处理操作
@@ -20,7 +23,8 @@ class LinearRegression:
         self.polynomial_degree = polynomial_degree
         self.sinusoid_degree = sinusoid_degree
         self.normalize_data = normalize_data
-        
+
+        """多少列"""
         num_features = self.data.shape[1]
         self.theta = np.zeros((num_features,1))
         
@@ -78,6 +82,7 @@ class LinearRegression:
          )[0]
         
         return self.cost_function(data_processed,labels)
+
     def predict(self,data):
         """
                     用训练的参数模型，与预测得到回归值结果
@@ -91,7 +96,3 @@ class LinearRegression:
         predictions = LinearRegression.hypothesis(data_processed,self.theta)
         
         return predictions
-        
-        
-        
-        
